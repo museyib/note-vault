@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: note-vault
+  datasource:
+    url: "${DB_URL:jdbc:postgresql://localhost:5432/note_vault}"
+    username: "${DB_USERNAME:postgres}"
+    password: "${DB_PASSWORD:postgres}"
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    show-sql: true
+    properties:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+server:
+  port: 8090
+
+app:
+  jwt:
+    secretKey: GuJ0HdJSDlMpjHVeKZ6ngZjkwUndcPm4nlOF1YWPLQk
+    accessTokenexpiration: 3600000
+    refreshTokenExpiration: 604800000
+
+
